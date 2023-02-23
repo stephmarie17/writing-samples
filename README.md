@@ -1,5 +1,65 @@
 # Technical Writing Samples
 
+## Netlify Email Integration
+**This is a sample from documentation that I wrote for the [Netlify Email Integration](https://docs.netlify.com/integrations/email-integration/). This section describes how to use the add attachment feature of the Integration.**
+
+### Add attachments to your email
+When sending messages, you can also specify any files you’d like to attach. Using the snippet generated during the [email preview](https://docs.netlify.com/integrations/email-integration/#preview-email-templates), add the `attachments` property to the request `body`. The `attachments` property is an array that may contain three properties to attach your file: `content`, `filename`, and `type`.
+
+| Property Name | Type     | Description                                         | Required |
+| ============= | ======== | =================================================== | ======== |
+| `content`     | `string` | Base64 encoded string of the file                   | Yes      |
+| `filename`    | `string` | The name of the file as it will appear in the email | Yes      |
+| `type`        | `string` | the MIME type of content you’re attaching           | Yes      |
+
+For example, the following handler function parses a `.pdf` file saved in an assets folder in the project. Nested in the body object is an `attachments` array that lists the `content`, `filename`, and `type` properties for that file.
+
+```tsx
+import { Handler } from "@netlify/functions";
+import fetch from “node-fetch”;
+import fs from “fs”;
+
+const handler: Handler = async () => {
+  const file = fs.readFileSync(“./assets/example.pdf”).toString(“base64”);
+  const response = await fetch(
+    `${process.env.URL}/.netlify/functions/emails/forgotten-password`,
+    {
+      headers: {
+        “netlify-emails-secret”: process.env.NETLIFY_EMAILS_SECRET, 
+      },
+      method: “POST”,
+      body: JSON.stringify({
+        from: “sender@myemailsender.com”,
+        cc: “recipient@youremail.com”,
+        to: “recipient@youremail.com”,
+        subject: “Password Reset”,
+        attachments: [
+	        {
+            content: file,
+            filename: “example.pdf”,
+            type: “pdf”,
+          }
+        ],
+        parameters: {
+          name: "Test",
+        } 
+      })
+    }
+  );
+
+  const responseBody = await response.json();
+
+  return (
+    statusCode: response.status,
+    body: JSON.stringify(responseBody)
+  );
+};
+
+export { handler };
+
+```
+Refer to your email provider's documentation to verify which types of content are valid. 
+
 ## Twilio Platform Advanced
 **A hands-on course with a demo application developed for the Twilio Build Partner Community to teach advanced Voice and Messaging API features.**
 
