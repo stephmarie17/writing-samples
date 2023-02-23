@@ -7,7 +7,7 @@
 When sending messages, you can also specify any files you’d like to attach. Using the snippet generated during the [email preview](https://docs.netlify.com/integrations/email-integration/#preview-email-templates), add the `attachments` property to the request `body`. The `attachments` property is an array that may contain three properties to attach your file: `content`, `filename`, and `type`.
 
 | Property Name | Type     | Description                                         | Required |
-| ============= | ======== | =================================================== | ======== |
+| ------------- | -------- | --------------------------------------------------- | -------- |
 | `content`     | `string` | Base64 encoded string of the file                   | Yes      |
 | `filename`    | `string` | The name of the file as it will appear in the email | Yes      |
 | `type`        | `string` | the MIME type of content you’re attaching           | Yes      |
