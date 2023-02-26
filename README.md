@@ -1,9 +1,11 @@
 # Technical Writing Samples
 
-## Netlify Email Integration
+## Sample 1: Netlify Email Integration
+
 **This is a sample from documentation that I wrote for the [Netlify Email Integration](https://docs.netlify.com/integrations/email-integration/). This section describes how to use the add attachment feature of the Integration.**
 
 ### Add attachments to your email
+
 When sending messages, you can also specify any files you’d like to attach. Using the snippet generated during the [email preview](https://docs.netlify.com/integrations/email-integration/#preview-email-templates), add the `attachments` property to the request `body`. The `attachments` property is an array that may contain three properties to attach your file: `content`, `filename`, and `type`.
 
 | Property Name | Type     | Description                                         | Required |
@@ -60,13 +62,18 @@ export { handler };
 ```
 Refer to your email provider's documentation to verify which types of content are valid. 
 
-## Twilio Platform Advanced
+## Sample 2: Twilio Platform Advanced
+
 **A hands-on course with a demo application developed for the Twilio Build Partner Community to teach advanced Voice and Messaging API features.**
 
-### Intro
-This project was created in collaboration with one of my team members at Twilio’s Center of Excellence. On this team, I crafted technical training courses for Partner Enablement. Twilio Platform Certification was a requirement for Twilio Partners to complete; this course was the next step in their learning journey to implement advanced API features. To create this course, I learned the usage of Twilo’s Voice and Messaging APIs, with a focus on Messaging to create a sample voicemail system that triggered automatic SMS alerts to the voicemail owner whenever a new one was received. 
+### Overview
+
+I created this project in collaboration with one of my team members at Twilio’s Center of Excellence. On this team, I crafted technical training courses designed for Partner Enablement. Twilio Platform Certification was a requirement for Twilio Partners to complete; this course was the next step in their learning journey to implement advanced API features. 
+
+To create this course, I learned the usage of Twilo’s Voice and Messaging APIs, including sending SMS alerts, incorporating transcription features, and managing and testing scheduled messages. To demonstrate these features to learners, I worked on the Messaging portion of a voicemail demo app.
 
 The key features this app highlighted were:
+
 - Recording messages and deleting recordings
 - Creating transcriptions of voicemail recordings and deleting transcriptions
 - Sending automated SMS alerts
@@ -74,38 +81,62 @@ The key features this app highlighted were:
 - Utilizing Messaging Insights via the Twilio Console
 
 ### Course preview
-Here, the learner is provided the starter code for a voicemail application to review the project structure. From here, the learner is introduced to incorporating SMS functionality into the app, by sending an SMS alert when a new voicemail is received in the mailbox.
+
+I provide the learner with the starter code for a voicemail application and explain the file structure. Next, the course introduces the learner to incorporating SMS functionality into the app, by sending an SMS alert when a new voicemail is received in the mailbox.
+
 ![Sending SMS alerts](/assets/sms_app_example_edit.png)
 
 
-In this example from the course, I've included two code snippets that I wrote to demonstrate how to include the necessary parameters for the SMS API. In addition to writing these snippets, I styled them in order to be embedded into the Rise course with proper colors and indentations for readability. 
+In this example from the course, I include two code snippets that I wrote to demonstrate how to include the necessary parameters for the SMS API. In addition to writing these snippets, I styled them in order to be embedded into the Rise course with appropriate colors and indentations for readability. 
+
 ![Code snippets](/assets/sms_app_example2_edit.png)
 
-### Resources
-To view the starter code that learners utilized for this course, access the GitHub repository [here](https://github.com/TwilioTraining/platform-advanced-voice). Note: only the starter code is available for me to share; the detailed course with additional code snippets are proprietary to the Twilio Build Community.
+One of the key pieces of feedback that developers gave the Center of Excellence was the need for real-life examples of code, and this project provided useful examples that could be re-worked and applied to a developer's specific use case. 
 
-## Twilio Console Overview
+### Resources
+
+To view the starter code that learners utilized for this course, access the GitHub repository [here](https://github.com/TwilioTraining/platform-advanced-voice). Note: only the starter code is available for me to share. the detailed course with additional code snippets are proprietary to the Twilio Build Community for Twilio Partners.
+
+## Sample 3: Twilio Console Overview
+
 **Technical training course developed for [twiliotraining.com](https://www.twiliotraining.com/store).**
 
-### Intro
-I developed this course using Articulate360 - Rise as an update to an existing version created by another team member. The Twilio Console is the web-based interface for utilizing Twilio products and APIs; the 2.0 version launched to the public in 2021. This course update was designed in order to incorporate the latest changes to the Console. The intended audience for the course are developers, administrators, and support teams. The process for this update included: meeting with the product SME, auditing the existing course and identifying and correcting errors, creating new content for additional course modules, editing the course, and deploying to the appropriate learning management systems.
+### Overview
+
+I developed this course using Articulate360 - Rise as an update to an existing version created by another team member. The Twilio Console is the web-based interface for utilizing Twilio products and APIs. The 2.0 version launched to the public in 2021, which required content maintenance to update the course. This course update was designed in order to reflect the latest changes to the Console. 
+
+The intended audience for the course are developers, administrators, and support teams. The process for this update included: 
+
+- Meeting with the product SME
+- Auditing the existing course to identify and correct errors
+- Creating new content for additional course modules and add more interactivity 
+- Editing the course and implementing feedback
+- Deploying to the appropriate learning management systems
 
 Below, explore an outline of this course.
 
 ### Learning objectives
+
 I developed the learning objectives for this course based upon instructional design best practices.
+
 ![Learning objectives](/assets/console_01_edit.png)
 
 ### Navigation and site tour
-This section breaks down the key sections of the updated Console interface, and includes an interactive heatmap for a  self-guided tour of the application.
+
+This section breaks down the key sections of the updated Console interface, and includes an interactive heatmap to provide learners a self-guided tour of the application. This approach was essential due to a re-naming of a key feature of the console, and was helpful for users of the previous version to understand where content had moved within the application.
+
 ![Navigation and site tour](/assets/console_02_edit.png)
 
 ### Account quickstart
-In this module, I created a step-by-step quickstart guide for upgrading Trial Console accounts to Paid Console accounts. 
+
+In this module, I created a step-by-step quickstart guide for upgrading Trial Console accounts to Paid Console accounts using an interactive stepper.
+
 ![Quickstart](/assets/console_03_edit.png)
 
 ### Video tour
-In this section, I collaborated with another technical writer on the team to write a script for a video tour (developed in Storyline) of the Console including:
+
+In this section, I collaborated with another technical writer on the team to write a script for a video tour developed in Storyline 360 of the Console including:
+
 - Locating Account SIDs and Auth Tokens
 - Monitoring API insights
 - Setting up billing accounts
@@ -113,10 +144,4 @@ In this section, I collaborated with another technical writer on the team to wri
 - Accessing and submitting support requests
 
 ![Video tour](/assets/console_04_edit.png)
-
-
-
-
-
-
 
