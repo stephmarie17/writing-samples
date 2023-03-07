@@ -1,5 +1,11 @@
 # Technical Writing Samples
 
+Below are a few samples of technical writing I have done. For additional examples, see:
+- [Sentry Integration on Netlify](https://docs.netlify.com/netlify-labs/experimental-features/sentry-integration/)
+- [PlanetScale Integration on Netlify](https://docs.netlify.com/netlify-labs/experimental-features/planetscale-integration/)
+
+_Note that the links above are live! Updates may have taken place since I first created these pieces of documentation._
+
 ## Table of contents
 
 - [Sample 1: Netlify Email Integration](#sample-1-netlify-email-integration)
